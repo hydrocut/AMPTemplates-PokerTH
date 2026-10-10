@@ -1,0 +1,43 @@
+[
+    {
+        "UpdateStageName": "Script d'installation",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/hydrocut/AMPTemplates-PokerTH/main/scripts/installer-pokerth.sh",
+        "UpdateSourceArgs": "installer-pokerth.sh",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Script de lancement",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/hydrocut/AMPTemplates-PokerTH/main/scripts/lancer-pokerth.sh",
+        "UpdateSourceArgs": "lancer-pokerth.sh",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Modele des reglages (AMP_reglages-pokerth.txt)",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/hydrocut/AMPTemplates-PokerTH/main/scripts/AMP_reglages-pokerth.txt",
+        "UpdateSourceArgs": "AMP_reglages-pokerth.txt",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Telechargement et compilation du serveur dedie PokerTH (derniere version)",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "\"{{$FullBaseDir}}installer-pokerth.sh\" \"{{$FullBaseDir}}\"",
+        "SkipOnFailure": false
+    }
+]

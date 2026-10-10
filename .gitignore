@@ -1,0 +1,12 @@
+# Ce depot ne contient que le template : PokerTH est telecharge et compile
+# a l Update dans AMP. Rien de ce qui suit ne doit y entrer.
+pokerth-serveur/
+pokerth-serveur.nouveau/
+.compilation/
+donnees/
+reglages-pokerth.txt
+*.tar.gz
+__pycache__/
+
+# Notes internes de TeamKit (essais, etapes), pas dans le depot public
+FAISABILITE.md

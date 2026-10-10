@@ -1,0 +1,9 @@
+[
+    {
+        "Protocol": "TCP",
+        "Port": 7234,
+        "Ref": "GamePort",
+        "Name": "Port du jeu",
+        "Description": "Seul port a ouvrir, en TCP. 7234 est le port par defaut de PokerTH : c'est celui que le jeu propose dans la configuration manuelle du serveur (Partie Internet). Le port WebSocket (7233, client navigateur) n'est pas ouvert : aucun client navigateur ne peut joindre ce serveur sans domaine ni certificat."
+    }
+]

@@ -1,0 +1,53 @@
+[
+    {
+        "DisplayName": "Mot de passe du serveur",
+        "Category": "PokerTH:casino",
+        "Subcategory": "Accès:lock:1",
+        "Description": "Vide = serveur ouvert à tous. Sinon, chaque joueur doit taper exactement ce mot de passe dans son jeu (Paramètres > Partie Internet > Configuration manuelle du serveur > Mot de passe du serveur) avant de se connecter. C'est le seul contrôle d'accès d'un serveur dédié PokerTH : il n'a ni comptes, ni administrateurs, ni classement. Espaces au début et à la fin retirés ; accents et caractères spéciaux acceptés.",
+        "Keywords": "mot de passe,password,prive,acces,serveur",
+        "FieldName": "mot_de_passe",
+        "InputType": "password",
+        "ParamFieldName": "mot_de_passe",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Adresses IP sans limite de connexions",
+        "Category": "PokerTH:casino",
+        "Subcategory": "Accès:lock:1",
+        "Description": "Facultatif. Le serveur limite les connexions par adresse IP contre les essais de mots de passe : 5 d'affilée, puis une toutes les 30 secondes (les suivantes sont refusées). Si plusieurs joueurs arrivent par la même adresse (même box, même établissement), mettez-la ici. Plusieurs adresses séparées par des virgules, par exemple 203.0.113.7,198.51.100.20. Vide = la limite s'applique à tout le monde (recommandé).",
+        "Keywords": "ip,limite,connexion,nat,box,brute force,exemption",
+        "FieldName": "ip_sans_limite",
+        "InputType": "text",
+        "ParamFieldName": "ip_sans_limite",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Webhook Discord du salon",
+        "Category": "PokerTH:casino",
+        "Subcategory": "Discord:forum:2",
+        "Description": "Facultatif. Adresse d'un webhook Discord (Paramètres du salon Discord > Intégrations > Webhooks > Copier l'URL du webhook, de la forme https://discord.com/api/webhooks/...) : la discussion du salon (lobby) du serveur est alors recopiée dans ce salon Discord. Vide = rien n'est envoyé. Toute autre adresse est ignorée. Fonction du serveur PokerTH, non testée par TeamKit avec un vrai webhook.",
+        "Keywords": "discord,webhook,chat,discussion,salon",
+        "FieldName": "webhook_discord",
+        "InputType": "password",
+        "ParamFieldName": "webhook_discord",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Journal du serveur",
+        "Category": "PokerTH:casino",
+        "Subcategory": "Journal:description:3",
+        "Description": "Ce que le serveur écrit dans la console d'AMP (et dans donnees/journaux/server_messages.log). Normal : démarrage, arrivées et départs des joueurs, refus (mauvaise version du jeu, mauvais mot de passe), erreurs. Détaillé : en plus, chaque connexion et chaque erreur réseau, utile pour chercher pourquoi un joueur n'arrive pas à se connecter. Le niveau 0 du serveur n'est pas proposé : il n'écrit plus les arrivées des joueurs et la liste des joueurs d'AMP resterait vide.",
+        "Keywords": "journal,log,console,debug,detaille",
+        "FieldName": "niveau_journal",
+        "InputType": "enum",
+        "ParamFieldName": "niveau_journal",
+        "DefaultValue": "1",
+        "EnumValues": {
+            "1": "Normal (recommandé)",
+            "2": "Détaillé (connexions, erreurs réseau)"
+        }
+    }
+]

@@ -1,0 +1,8 @@
+[
+    {
+        "ConfigFile": "reglages-pokerth.txt",
+        "ConfigType": "template",
+        "AutoMap": true,
+        "ConfigFileTemplate": "pokerth/AMP_reglages-pokerth.txt"
+    }
+]

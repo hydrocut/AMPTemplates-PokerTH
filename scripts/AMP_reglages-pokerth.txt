@@ -1,0 +1,6 @@
+# Rendu par AMP a chaque demarrage depuis AMP_reglages-pokerth.txt (onglet Configuration).
+# Une ligne cle=valeur par reglage, lue par lancer-pokerth.sh. Ne pas modifier ici.
+mot_de_passe={{mot_de_passe}}
+ip_sans_limite={{ip_sans_limite}}
+niveau_journal={{niveau_journal}}
+webhook_discord={{webhook_discord}}
