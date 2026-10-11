@@ -118,7 +118,8 @@ kept (port, password with `& < > " '` and accents, IP list, webhook, directories
 refused and masked in the console; 10 headless clients (`pokerth_bot`, unauthenticated login like
 the real client on a no-auth server) connected and played hands; join/leave lines against the
 regexes; SIGTERM (clean, 0.6 s) and SIGKILL of the script (server and log copy stop too); invalid
-settings. RAM: server 25–27 MB with 10 players.
+settings. RAM: server 25–27 MB with 10 players. `App.MaxUsers=10` (one full table) is the capacity
+AMP and the TeamKit site display; the server itself accepts more players on several tables.
 
 **Not tested**: a real PokerTH client, AMP itself (Update, settings rendering, user list), the
 Discord webhook, long uptimes, the next PokerTH release.

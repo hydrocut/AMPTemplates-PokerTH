@@ -93,6 +93,10 @@ else:
     print('ok   kvp complet                les %d clés Console/Limits sont là' % len(ATTENDUES))
 if cles.get('App.ApplicationReadyMode') != 'RegexMatch' or not cles.get('Console.AppReadyRegex'):
     soucis.append('RegexMatch avec une AppReadyRegex attendue (sinon l’instance n’est jamais prête)')
+# Capacité affichée par AMP et le site : une table pleine (2 à 10 joueurs, MAX_NUMBER_OF_PLAYERS),
+# chiffre essayé avec 10 clients. Jamais 0 (« x / 0 », 0 place sur le site).
+if cles.get('App.MaxUsers') != '10':
+    soucis.append('App.MaxUsers devrait valoir 10 (une table pleine, essayé avec 10 clients)')
 if cles.get('App.ExitMethod') != 'SIGTERM':
     soucis.append('App.ExitMethod doit être SIGTERM : le serveur s’arrête proprement sur SIGTERM')
 if cles.get('App.HasWriteableConsole') != 'False':
